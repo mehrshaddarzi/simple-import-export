@@ -3,7 +3,7 @@
  * Plugin Name: Simple Import Export Data
  * Description: Simple Import/Export WordPress and WooCommerce Data
  * Plugin URI:  https://realwp.net
- * Version:     1.0.0
+ * Version:     1.2.0
  * Author:      Mehrshad Darzi
  * Author URI:  https://realwp.net
  * License:     MIT

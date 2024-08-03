@@ -64,79 +64,6 @@ class Helper
         );
     }
 
-    public static function wc_get_available_payment_list($enabled = true, $suppress_filter = false)
-    {
-        // Suppress filter
-        if ($suppress_filter) {
-            remove_all_filters('woocommerce_available_payment_gateways');
-        }
-
-        // Get List
-        $gateways = WC()->payment_gateways->get_available_payment_gateways();
-        $enabled_gateways = array();
-        if ($gateways) {
-            foreach ($gateways as $gateway_key => $gateway) {
-                if ($gateway->enabled == 'yes') {
-
-                    // Get Order
-                    $order = (array)get_option('woocommerce_gateway_order');
-
-                    // Setting
-                    $settings = array();
-                    $gateway->init_form_fields();
-                    foreach ($gateway->form_fields as $id => $field) {
-
-                        // Make sure we at least have a title and type.
-                        if (empty($field['title']) || empty($field['type'])) {
-                            continue;
-                        }
-                        // Ignore 'title' settings/fields -- they are UI only.
-                        if ('title' === $field['type']) {
-                            continue;
-                        }
-                        // Ignore 'enabled' and 'description' which get included elsewhere.
-                        if (in_array($id, array('enabled', 'description'), true)) {
-                            continue;
-                        }
-                        $data = array(
-                            'id' => $id,
-                            'label' => empty($field['label']) ? $field['title'] : $field['label'],
-                            'description' => empty($field['description']) ? '' : $field['description'],
-                            'type' => $field['type'],
-                            'value' => empty($gateway->settings[$id]) ? '' : $gateway->settings[$id],
-                            'default' => empty($field['default']) ? '' : $field['default'],
-                            'tip' => empty($field['description']) ? '' : $field['description'],
-                            'placeholder' => empty($field['placeholder']) ? '' : $field['placeholder'],
-                        );
-                        if (!empty($field['options'])) {
-                            $data['options'] = $field['options'];
-                        }
-                        $settings[$id] = $data;
-                    }
-
-                    // Prepare Item
-                    $item = array(
-                        'id' => $gateway->id,
-                        'title' => $gateway->title,
-                        'description' => $gateway->description,
-                        'order' => $order[$gateway->id] ?? '',
-                        'enabled' => ('yes' === $gateway->enabled),
-                        'method_title' => $gateway->get_method_title(),
-                        'method_description' => $gateway->get_method_description(),
-                        'settings' => $settings,
-                    );
-
-                    $enabled_gateways[$gateway_key] = $item;
-                }
-            }
-        }
-
-        if ($enabled) {
-            return $enabled_gateways; // Return Only enabled in Setting
-        }
-        return $gateways; // Return All
-    }
-
     public static function wp_get_sanitize_mobile($mobile)
     {
 
@@ -188,6 +115,59 @@ class Helper
         }
 
         return $order_date;
+    }
+
+    public static function readJson($path)
+    {
+        if (!file_exists($path)) {
+            return array('status' => false, 'message' => 'file not found');
+        }
+        $string = file_get_contents($path);
+        $array = json_decode($string, true);
+        if ($array === null) {
+            return array('status' => false, 'message' => 'problem parse json file');
+        }
+
+        return $array;
+    }
+
+    public static function createJsonFile($file_path, $array, $JSON_PRETTY = false): bool
+    {
+        //Prepare Data
+        if ($JSON_PRETTY) {
+            $data = json_encode($array, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+        } else {
+            $data = json_encode($array, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);
+        }
+
+        //Save To File
+        if (self::file_put_content($file_path, $data)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static function file_put_content($file_path, $data)
+    {
+        try {
+            $isInFolder = preg_match("/^(.*)\/([^\/]+)$/", $file_path, $file_path_match);
+            if ($isInFolder) {
+                $folderName = $file_path_match[1];
+                if (!is_dir($folderName)) {
+                    // Create Folder
+                    if (!@mkdir($folderName, 0777, true)) {
+                        $mkdirErrorArray = error_get_last();
+                        return array('status' => false, 'message' => 'Cannot create directory. ' . $mkdirErrorArray['message']);
+                    }
+                }
+            }
+            // File Put Content
+            file_put_contents($file_path, $data);
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
 }

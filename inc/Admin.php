@@ -13,6 +13,7 @@ class Admin
 
         add_filter('simple_prepare_data_for_export', [$this, 'woocommerce_product'], 20, 3);
         add_action('simple_export_handle_file', [$this, 'excel_export'], 20, 3);
+        add_action('simple_export_handle_file', [$this, 'json_export'], 25, 3);
     }
 
     public function admin_menu()
@@ -43,7 +44,8 @@ class Admin
     public static function get_export_extensions()
     {
         return apply_filters('simple_import_export_extensions_lists', [
-            'excel' => 'Excel'
+            'excel' => 'Excel',
+            'json' => 'Json',
         ]);
     }
 
@@ -204,6 +206,69 @@ class Admin
         FlashMessage::set($text, 'success');
     }
 
+    public function json_export($data, $type, $extension)
+    {
+        if ($extension != 'json') {
+            return;
+        }
+
+        if (empty($data)) {
+            FlashMessage::set('لیست خالی می باشد', 'info');
+            return;
+        }
+
+        // Dir name
+        $parsed_args['dir'] = 'simple-import-export';
+
+        // Get Directory
+        $upload_dir = wp_upload_dir(null, false);
+
+        // Get Default Path
+        $defaultPath = rtrim($upload_dir['basedir'], "/") . '/' . $parsed_args['dir'] . '/';
+        $default_link = rtrim($upload_dir['baseurl'], "/") . '/' . $parsed_args['dir'] . '/';
+        if (!file_exists($defaultPath)) {
+            @mkdir($defaultPath, 0777, true);
+        }
+
+        // Remove Last PDF File
+        $expire = strtotime('-1 DAYS');
+        $files = glob($defaultPath . '*');
+        foreach ($files as $file) {
+            if (!is_file($file)) {
+                continue;
+            }
+            if (filemtime($file) > $expire) {
+                continue;
+            }
+            @unlink($file);
+        }
+
+        // Create FileName
+        $fileName = $parsed_args['prefix'] . current_time('timestamp') . get_current_user_id() . '.json';
+        $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
+
+        // Save File in Disk
+        $createJson = Helper::createJsonFile($path, $data, false);
+        if (!$createJson) {
+
+            FlashMessage::set('خطا در ایجاد فایل Json رخ داده است', 'error');
+            return;
+        }
+
+        // Excel Export
+        $createFile = [
+            'size' => filesize($path),
+            'url' => rtrim($default_link, "/") . '/' . ltrim($fileName, "/")
+        ];
+
+        // Show Flush Message
+        $text = 'فایل گزارش با موفقیت ایجاد شد.';
+        $text .= '<br />';
+        $text .= 'تعداد ردیف: ' . number_format(count($data));
+        $text .= '<br />';
+        $text .= '<a href="' . $createFile['url'] . '" download>' . 'دریافت فایل' . '</a>';
+        FlashMessage::set($text, 'success');
+    }
 }
 
 new Admin();
