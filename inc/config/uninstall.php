@@ -1,13 +1,15 @@
 <?php
+
 namespace Simple_Import_Export\config;
 
-class uninstall {
+class uninstall
+{
 
-	/*
-	 * uninstall Plugin Method
-	 */
-	public static function run_uninstall() {
+    public static function run_uninstall()
+    {
 
-	}
-
+        global $wpdb;
+        $table = $wpdb->prefix . 'usermeta';
+        $wpdb->delete($table, array('meta_key' => 'flash-message'));
+    }
 }
