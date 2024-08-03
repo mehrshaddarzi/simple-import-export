@@ -162,18 +162,15 @@ class Simple_Import_Export
      */
     public function includes()
     {
-
-        /*
-         * autoload plugin files
-         */
-        include_once dirname(__FILE__) . '/inc/config/i18n.php';
-        include_once dirname(__FILE__) . '/inc/config/install.php';
-        include_once dirname(__FILE__) . '/inc/config/uninstall.php';
-        include_once dirname(__FILE__) . '/inc/Helper.php';
-        include_once dirname(__FILE__) . '/inc/FlashMessage.php';
-        include_once dirname(__FILE__) . '/inc/Admin.php';
-        include_once dirname(__FILE__) . '/inc/ParsiDate.php';
-        include_once dirname(__FILE__) . '/inc/core/utility.php';
+        require_once dirname(__FILE__) . '/inc/config/i18n.php';
+        require_once dirname(__FILE__) . '/inc/config/install.php';
+        require_once dirname(__FILE__) . '/inc/config/uninstall.php';
+        require_once dirname(__FILE__) . '/inc/Helper.php';
+        require_once dirname(__FILE__) . '/inc/FlashMessage.php';
+        require_once dirname(__FILE__) . '/inc/Admin.php';
+        require_once dirname(__FILE__) . '/inc/ParsiDate.php';
+        require_once dirname(__FILE__) . '/inc/Custom.php';
+        require_once dirname(__FILE__) . '/inc/core/utility.php';
     }
 
     /**
