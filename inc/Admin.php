@@ -18,6 +18,9 @@ class Admin
         add_action('simple_export_handle_file', [$this, 'json_export'], 25, 3);
 
         // Import
+        add_action('admin_init', array($this, 'import_handle'));
+        add_filter('simple_prepare_data_for_import', [$this, 'json_import'], 20, 4);
+        add_action('simple_import_handle_file', [$this, 'woocommerce_product_import'], 20, 3);
     }
 
     public function admin_menu()
@@ -44,14 +47,29 @@ class Admin
 
     public static function get_export_types()
     {
-        return apply_filters('simple_import_export_type_lists', [
+        return apply_filters('simple_import_export_type_lists_at_export', [
             'woocommerce_product' => 'WooCommerce Product'
         ]);
     }
 
     public static function get_export_extensions()
     {
-        return apply_filters('simple_import_export_extensions_lists', [
+        return apply_filters('simple_import_export_extensions_lists_at_export', [
+            'excel' => 'Excel',
+            'json' => 'Json',
+        ]);
+    }
+
+    public static function get_import_types()
+    {
+        return apply_filters('simple_import_export_type_lists_at_import', [
+            'woocommerce_product' => 'WooCommerce Product'
+        ]);
+    }
+
+    public static function get_import_extensions()
+    {
+        return apply_filters('simple_import_export_extensions_lists_at_import', [
             'excel' => 'Excel',
             'json' => 'Json',
         ]);
@@ -285,6 +303,72 @@ class Admin
     /**
      * Import
      */
+
+    public function import_handle()
+    {
+        global $pagenow;
+
+        if (is_admin() and isset($_POST['import_nonce_simple'])
+            || !wp_verify_nonce($_POST['import_nonce_simple'], 'import_nonce_simple') and isset($_FILES['attachment'])) {
+
+            // Get Post Data
+            $type = $_POST['type'];
+            $extension = $_POST['extension'];
+
+            // Attachment Detail
+            $attach_filename = $_FILES['attachment']['name'];
+            $attach_extension = pathinfo($attach_filename, PATHINFO_EXTENSION);
+
+            // Upload File
+            $upload_dir = wp_upload_dir(null, false);
+            $target_file = rtrim($upload_dir['basedir'], "/") . '/' . time() . '.' . $attach_extension;
+            $upload = move_uploaded_file($_FILES["attachment"]["tmp_name"], $target_file);
+            if (!$upload) {
+
+                FlashMessage::set('آپلود فایل ناموفق بوده است', 'error');
+                return;
+            }
+
+            // Set time Limit Zero
+            set_time_limit(0);
+
+            // Setup Data
+            $data = apply_filters('simple_prepare_data_for_import', [], $target_file, $type, $extension);
+
+            // Remove file From Server
+            @unlink($target_file);
+
+            // Import
+            do_action('simple_import_handle_file', $data, $type, $extension);
+        }
+    }
+
+    public function json_import($data, $target_file, $type, $extension)
+    {
+        if ($extension != 'json') {
+            return $data;
+        }
+
+        if (!file_exists($target_file)) {
+            return $data;
+        }
+
+        $parseJson = Helper::readJson($target_file);
+        if ($parseJson['status']) {
+            return $parseJson['data'];
+        }
+
+        return $data;
+    }
+
+    public function woocommerce_product_import($data, $type, $extension)
+    {
+        if ($type != 'woocommerce_product') {
+            return;
+        }
+
+        // Do Work
+    }
 
 }
 

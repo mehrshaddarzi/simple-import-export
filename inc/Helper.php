@@ -128,7 +128,7 @@ class Helper
             return array('status' => false, 'message' => 'problem parse json file');
         }
 
-        return $array;
+        return ['status' => true, 'data' => $array];
     }
 
     public static function createJsonFile($file_path, $array, $JSON_PRETTY = false): bool
