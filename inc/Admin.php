@@ -2,6 +2,8 @@
 
 namespace Simple_Import_Export;
 
+use Shuchkin\SimpleXLSX;
+
 class Admin
 {
 
@@ -20,6 +22,7 @@ class Admin
         // Import
         add_action('admin_init', array($this, 'import_handle'));
         add_filter('simple_prepare_data_for_import', [$this, 'json_import'], 20, 4);
+        add_filter('simple_prepare_data_for_import', [$this, 'excel_import'], 20, 4);
         add_action('simple_import_handle_file', [$this, 'woocommerce_product_import'], 20, 3);
     }
 
@@ -357,6 +360,29 @@ class Admin
         if ($parseJson['status']) {
             return $parseJson['data'];
         }
+
+        return $data;
+    }
+
+    public function excel_import($data, $target_file, $type, $extension)
+    {
+        if ($extension != 'excel') {
+            return $data;
+        }
+
+        if (!file_exists($target_file)) {
+            return $data;
+        }
+
+        // include Package
+        require_once \Simple_Import_Export::$plugin_path . '/libs/simplexlsx/vendor/autoload.php';
+        if ($xlsx = SimpleXLSX::parse($target_file)) {
+            return $xlsx->rows();
+        }
+
+        /*else {
+            echo SimpleXLSX::parseError();
+        }*/
 
         return $data;
     }
