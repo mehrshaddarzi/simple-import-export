@@ -8,12 +8,16 @@ class Admin
     public function __construct()
     {
 
+        // Admin Menu
         add_action('admin_menu', array($this, 'admin_menu'));
-        add_action('admin_init', array($this, 'export_handle'));
 
+        // Export
+        add_action('admin_init', array($this, 'export_handle'));
         add_filter('simple_prepare_data_for_export', [$this, 'woocommerce_product'], 20, 3);
         add_action('simple_export_handle_file', [$this, 'excel_export'], 20, 3);
         add_action('simple_export_handle_file', [$this, 'json_export'], 25, 3);
+
+        // Import
     }
 
     public function admin_menu()
@@ -34,6 +38,10 @@ class Admin
         include \Simple_Import_Export::$plugin_path . '/templates/page.php';
     }
 
+    /**
+     * Define
+     */
+
     public static function get_export_types()
     {
         return apply_filters('simple_import_export_type_lists', [
@@ -48,6 +56,10 @@ class Admin
             'json' => 'Json',
         ]);
     }
+
+    /**
+     * Export
+     */
 
     public function export_handle()
     {
@@ -269,6 +281,11 @@ class Admin
         $text .= '<a href="' . $createFile['url'] . '" download>' . 'دریافت فایل' . '</a>';
         FlashMessage::set($text, 'success');
     }
+
+    /**
+     * Import
+     */
+
 }
 
 new Admin();
