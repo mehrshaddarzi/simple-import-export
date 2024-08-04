@@ -87,7 +87,7 @@ class Admin
         global $pagenow;
 
         if (is_admin() and isset($_POST['export_nonce_simple'])
-            || !wp_verify_nonce($_POST['export_nonce_simple'], 'export_nonce_simple')) {
+            and wp_verify_nonce($_POST['export_nonce_simple'], 'export_nonce_simple')) {
 
             // Get Post Data
             $type = $_POST['type'];
@@ -218,7 +218,7 @@ class Admin
         }
 
         // Create FileName
-        $fileName = $parsed_args['prefix'] . current_time('timestamp') . get_current_user_id() . '.xls';
+        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.xls';
         $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
 
         // Save File in Disk
@@ -277,7 +277,7 @@ class Admin
         }
 
         // Create FileName
-        $fileName = $parsed_args['prefix'] . current_time('timestamp') . get_current_user_id() . '.json';
+        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.json';
         $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
 
         // Save File in Disk
@@ -312,7 +312,7 @@ class Admin
         global $pagenow;
 
         if (is_admin() and isset($_POST['import_nonce_simple'])
-            || !wp_verify_nonce($_POST['import_nonce_simple'], 'import_nonce_simple') and isset($_FILES['attachment'])) {
+            and wp_verify_nonce($_POST['import_nonce_simple'], 'import_nonce_simple') and isset($_FILES['attachment'])) {
 
             // Get Post Data
             $type = $_POST['type'];
