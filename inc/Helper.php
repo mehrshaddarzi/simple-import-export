@@ -117,7 +117,7 @@ class Helper
         return $order_date;
     }
 
-    public static function readJson($path)
+    public static function readJson($path): array
     {
         if (!file_exists($path)) {
             return array('status' => false, 'message' => 'file not found');
@@ -168,6 +168,55 @@ class Helper
         } catch (\Exception $e) {
             return false;
         }
+    }
+
+    public static function get_post($post_id)
+    {
+        // Get Post
+        $post = get_post($post_id, ARRAY_A);
+        if (is_null($post)) {
+            return [];
+        }
+
+        // Get Meta
+        $post['meta'] = array_map(function ($a) {
+            return maybe_unserialize($a[0]);
+        }, get_post_meta($post_id));
+
+        // Terms
+        $taxonomies = get_taxonomies([
+            'object_type' => [
+                $post['post_type']
+            ]
+        ]);
+        $post['terms'] = [];
+        foreach ($taxonomies as $taxonomy) {
+            $post['terms'][$taxonomy] = wp_get_post_terms($post_id, $taxonomy, array(['fields' => 'all']));
+        }
+
+        // Return
+        return apply_filters('simple_import_export_post_data', $post, $post_id);
+    }
+
+    public static function get_user($user_id): array
+    {
+        # Get User Data
+        $user_data = get_userdata($user_id);
+        $user_info = get_object_vars($user_data->data);
+
+        # Get User roles
+        $user_info['role'] = $user_data->roles;
+
+        # Get User Caps
+        $user_info['cap'] = $user_data->caps;
+
+        # Get User Meta
+        $user_info['meta'] = array_map(function ($a) {
+            return maybe_unserialize($a[0]);
+        }, get_user_meta($user_id));
+
+        # Return
+        return apply_filters('simple_import_export_user_data', $user_info, $user_id);
     }
 
 }
