@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h1 id="add-new-user">
+    <h1 id="simple-import-export-h1">
         <?php _e('Simple Import / Export', 'simple-import-export'); ?>
     </h1>
 
