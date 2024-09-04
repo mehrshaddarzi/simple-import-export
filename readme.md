@@ -1,4 +1,4 @@
-### Simple Process For Big Data in WordPress ( Import/Excel & ... )
+### Simple Process For Big Data in WordPress ( Import/Export )
 
 
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/simple-import-export/master/screenshot.jpg">
