@@ -5,45 +5,6 @@ namespace Simple_Import_Export\core;
 class Utility
 {
 
-    public static function wp_query($arg = array(), $title = true)
-    {
-        // Create Empty List
-        $list = array();
-
-        // Prepare Params
-        $default = array(
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'posts_per_page' => '-1',
-            'order' => 'ASC',
-            'fields' => 'ids',
-            'cache_results' => false,
-            'no_found_rows' => true, //@see https://10up.github.io/Engineering-Best-Practices/php/#performance
-            'update_post_meta_cache' => false,
-            'update_post_term_cache' => false,
-            'suppress_filters' => true
-        );
-        $args = wp_parse_args($arg, $default);
-
-        // Get Data
-        $query = new \WP_Query($args);
-
-        // Get SQL
-        //echo $query->request;
-        //exit;
-
-        // Added To List
-        foreach ($query->posts as $ID) {
-            if ($title) {
-                $list[$ID] = get_the_title($ID);
-            } else {
-                $list[] = $ID;
-            }
-        }
-
-        return $list;
-    }
-
     public static function is_edit_page($new_edit = null)
     {
         global $pagenow;
@@ -58,7 +19,7 @@ class Utility
             return in_array($pagenow, array('post.php', 'post-new.php'));
     }
 
-    public static function admin_notice($text, $model = "info", $close_button = true, $echo = true, $style_extra = 'padding:12px;')
+    public static function admin_notice($text, $model = "info", $close_button = true, $echo = true, $style_extra = 'padding:12px;line-height: 22px;')
     {
         $text = '
         <div class="notice notice-' . $model . '' . ($close_button === true ? " is-dismissible" : "") . '">
@@ -70,28 +31,6 @@ class Utility
         } else {
             return $text;
         }
-    }
-
-    public static function wp_user_query($arg = array())
-    {
-
-        $list = array();
-        $default = array(
-            'fields' => array('id'),
-            'orderby' => 'id',
-            'order' => 'ASC',
-            'count_total' => false
-        );
-        $args = wp_parse_args($arg, $default);
-
-        $user_query = new \WP_User_Query($args);
-        //[Get Request SQL]
-        //echo $user_query->request; 
-        foreach ($user_query->get_results() as $user) {
-            $list[] = $user->id;
-        }
-
-        return $list;
     }
 
     public static function json_exit($array)

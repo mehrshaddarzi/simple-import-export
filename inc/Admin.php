@@ -7,36 +7,65 @@ use Shuchkin\SimpleXLSX;
 class Admin
 {
 
+    public static string $page_slug = 'simple_import_export';
+
     public function __construct()
     {
 
         // Admin Menu
         add_action('admin_menu', array($this, 'admin_menu'));
 
+        // Admin Assets
+        add_action('admin_enqueue_scripts', array($this, 'admin_assets'));
+
         // Export
         add_action('admin_init', array($this, 'export_handle'));
-        add_filter('simple_prepare_data_for_export', [$this, 'woocommerce_product'], 20, 3);
         add_action('simple_export_handle_file', [$this, 'excel_export'], 20, 3);
         add_action('simple_export_handle_file', [$this, 'json_export'], 25, 3);
 
         // Import
-        add_action('admin_init', array($this, 'import_handle'));
+        add_action('wp_ajax_simple_import_export__import', [$this, 'import_ajax_step_1']);
+        add_action('wp_ajax_simple_import_export__import_run', [$this, 'import_ajax_step_2']);
         add_filter('simple_prepare_data_for_import', [$this, 'json_import'], 20, 4);
         add_filter('simple_prepare_data_for_import', [$this, 'excel_import'], 20, 4);
-        add_action('simple_import_handle_file', [$this, 'woocommerce_product_import'], 20, 3);
     }
 
     public function admin_menu()
     {
         add_menu_page(
-            __('Import/Export', 'edd-seller-panel'),
-            __('Import/Export', 'edd-seller-panel'),
+            __('Import/Export', 'simple-import-export'),
+            __('Import/Export', 'simple-import-export'),
             'manage_options',
-            'simple_import_export',
+            self::$page_slug,
             [$this, 'page'],
             'dashicons-database',
             90
         );
+    }
+
+    public function admin_assets()
+    {
+        global $pagenow;
+
+        //List Allow This Script
+        if ($pagenow == "admin.php") {
+
+            // Get Plugin Version
+            $plugin_version = \Simple_Import_Export::$plugin_version;
+            if (defined('SCRIPT_DEBUG') and SCRIPT_DEBUG === true) {
+                $plugin_version = time();
+            }
+
+            wp_enqueue_style(self::$page_slug, \Simple_Import_Export::$plugin_url . '/asset/admin/css/style.css', array(), $plugin_version, 'all');
+            wp_enqueue_script(self::$page_slug, \Simple_Import_Export::$plugin_url . '/asset/admin/js/script.js', array('jquery'), $plugin_version, false);
+            wp_localize_script(self::$page_slug, self::$page_slug, array(
+                'ajax' => admin_url('admin-ajax.php'),
+                'loading' => __('Loading ..', 'simple-import-export'),
+                'error' => __('Error', 'simple-import-export'),
+                'import_error' => __('An error occurred while executing the operation, please try again', 'simple-import-export')
+            ));
+        }
+
     }
 
     public function page()
@@ -50,9 +79,7 @@ class Admin
 
     public static function get_export_types()
     {
-        return apply_filters('simple_import_export_type_lists_at_export', [
-            'woocommerce_product' => 'WooCommerce Product'
-        ]);
+        return apply_filters('simple_import_export_type_lists_at_export', []);
     }
 
     public static function get_export_extensions()
@@ -65,9 +92,7 @@ class Admin
 
     public static function get_import_types()
     {
-        return apply_filters('simple_import_export_type_lists_at_import', [
-            'woocommerce_product' => 'WooCommerce Product'
-        ]);
+        return apply_filters('simple_import_export_type_lists_at_import', []);
     }
 
     public static function get_import_extensions()
@@ -89,7 +114,7 @@ class Admin
         if (is_admin() and isset($_POST['export_nonce_simple'])
             and wp_verify_nonce($_POST['export_nonce_simple'], 'export_nonce_simple')) {
 
-            // Get Post Data
+            // Get Input Data
             $type = $_POST['type'];
             $extension = $_POST['extension'];
 
@@ -104,76 +129,6 @@ class Admin
         }
     }
 
-    public function woocommerce_product($data, $type, $extension)
-    {
-        if ($type != 'woocommerce_product') {
-            return $data;
-        }
-
-        $args = array(
-            'status' => 'publish',
-            'limit' => '-1',
-            'order' => 'ASC',
-            'return' => 'objects',
-        );
-        $products = wc_get_products($args);
-
-        // Setup PHP Array
-        // @see https://github.com/shuchkin/simplexlsxgen
-        $columns = apply_filters('simple_prepare_excel_columns_wc_products', array(
-            'ID',
-            'Title',
-            'Type',
-            'SKU',
-            'Regular Price',
-            'Sale Price',
-            'Price'
-        ));
-        $data = [$columns];
-
-        // Setup Product Item
-        foreach ($products as $product) {
-
-            // Check Product Has Variable Or Simple
-            $children_ids = (array)$product->get_children();
-            if (count($children_ids) > 0) {
-
-                foreach ($product->get_children() as $child_id) {
-                    $variation = wc_get_product($child_id);
-
-                    if (!$variation) {
-                        continue;
-                    }
-
-                    $data[] = apply_filters('simple_import_export_wc_products_row_data', array(
-                        $variation->get_id(),
-                        $variation->get_formatted_name(),
-                        $variation->get_type(),
-                        $variation->get_sku(),
-                        (int)$variation->get_regular_price() * 10,
-                        (int)$variation->get_sale_price() * 10,
-                        (int)$variation->get_price() * 10
-                    ), $product);
-                }
-            } else {
-
-                // Append
-                $data[] = apply_filters('simple_import_export_wc_products_row_data', array(
-                    $product->get_id(),
-                    $product->get_name(),
-                    $product->get_type(),
-                    $product->get_sku(),
-                    (int)$product->get_regular_price() * 10,
-                    (int)$product->get_sale_price() * 10,
-                    (int)$product->get_price() * 10
-                ), $product);
-            }
-        }
-
-        // Return
-        return $data;
-    }
-
     public function excel_export($data, $type, $extension)
     {
         if ($extension != 'excel') {
@@ -181,7 +136,7 @@ class Admin
         }
 
         if (empty($data)) {
-            FlashMessage::set('لیست خالی می باشد', 'info');
+            FlashMessage::set(__('List is empty', 'simple-import-export'), 'info');
             return;
         }
 
@@ -231,11 +186,11 @@ class Admin
         ];
 
         // Show Flush Message
-        $text = 'فایل گزارش با موفقیت ایجاد شد.';
+        $text = __('File created', 'simple-import-export');
         $text .= '<br />';
-        $text .= 'تعداد ردیف: ' . number_format(count($data));
+        $text .= __('Number Row', 'simple-import-export') . ': ' . number_format(count($data));
         $text .= '<br />';
-        $text .= '<a href="' . $createFile['url'] . '" download>' . 'دریافت فایل' . '</a>';
+        $text .= '<a href="' . $createFile['url'] . '" style="text-decoration: none;color: #00a32a;" download>' . __('Download File', 'simple-import-export') . '</a>';
         FlashMessage::set($text, 'success');
     }
 
@@ -246,7 +201,7 @@ class Admin
         }
 
         if (empty($data)) {
-            FlashMessage::set('لیست خالی می باشد', 'info');
+            FlashMessage::set(__('List is empty', 'simple-import-export'), 'info');
             return;
         }
 
@@ -263,7 +218,7 @@ class Admin
             @mkdir($defaultPath, 0777, true);
         }
 
-        // Remove Last PDF File
+        // Remove Last File
         $expire = strtotime('-1 DAYS');
         $files = glob($defaultPath . '*');
         foreach ($files as $file) {
@@ -284,7 +239,7 @@ class Admin
         $createJson = Helper::createJsonFile($path, $data, false);
         if (!$createJson) {
 
-            FlashMessage::set('خطا در ایجاد فایل Json رخ داده است', 'error');
+            FlashMessage::set(__('Error in creating json file', 'simple-import-export'), 'error');
             return;
         }
 
@@ -295,11 +250,11 @@ class Admin
         ];
 
         // Show Flush Message
-        $text = 'فایل گزارش با موفقیت ایجاد شد.';
+        $text = __('File created', 'simple-import-export');
         $text .= '<br />';
-        $text .= 'تعداد ردیف: ' . number_format(count($data));
+        $text .= __('Number Row', 'simple-import-export') . ': ' . number_format(count($data));
         $text .= '<br />';
-        $text .= '<a href="' . $createFile['url'] . '" download>' . 'دریافت فایل' . '</a>';
+        $text .= '<a href="' . $createFile['url'] . '" style="text-decoration: none;color: #00a32a;" download>' . __('Download File', 'simple-import-export') . '</a>';
         FlashMessage::set($text, 'success');
     }
 
@@ -307,16 +262,24 @@ class Admin
      * Import
      */
 
-    public function import_handle()
+    public function import_ajax_step_1()
     {
-        global $pagenow;
+        if (wp_doing_ajax()) {
 
-        if (is_admin() and isset($_POST['import_nonce_simple'])
-            and wp_verify_nonce($_POST['import_nonce_simple'], 'import_nonce_simple') and isset($_FILES['attachment'])) {
+            // Check Nonce
+            if (!isset($_POST['import_nonce_simple']) || !wp_verify_nonce($_POST['import_nonce_simple'], 'import_nonce_simple')) {
+                wp_send_json_error(['message' => __('Security Error!', 'simple-import-excel')], 400);
+            }
 
-            // Get Post Data
+            // Check Empty Upload File
+            if (!isset($_FILES['attachment']) || empty($_FILES['attachment']['name'])) {
+                wp_send_json_error(['message' => __('No select any file', 'simple-import-excel')], 400);
+            }
+
+            // Get Input Data
             $type = $_POST['type'];
             $extension = $_POST['extension'];
+            $per_page = (int)$_POST['per_page'];
 
             // Attachment Detail
             $attach_filename = $_FILES['attachment']['name'];
@@ -328,7 +291,7 @@ class Admin
             $upload = move_uploaded_file($_FILES["attachment"]["tmp_name"], $target_file);
             if (!$upload) {
 
-                FlashMessage::set('آپلود فایل ناموفق بوده است', 'error');
+                wp_send_json_error(['message' => __('Error in Upload File', 'simple-import-excel')], 400);
                 return;
             }
 
@@ -341,8 +304,139 @@ class Admin
             // Remove file From Server
             @unlink($target_file);
 
-            // Import
-            do_action('simple_import_handle_file', $data, $type, $extension);
+            // Show If Empty
+            if (empty($data)) {
+                wp_send_json_error(['message' => __('List is empty', 'simple-import-export')], 400);
+            }
+
+            // Get Number Item
+            $number_item = count($data);
+
+            // Save To Option
+            $option_name = 'simple_import_export_user_' . get_current_user_id();
+            update_option($option_name, [
+                'input' => $_POST,
+                'list' => $data,
+                'number_process' => 0,
+                'per_page' => $per_page
+            ], 'no');
+
+            // Create Table Information
+            $table = [
+                __('Number Row', 'simple-import-export') => $number_item
+            ];
+
+            // Setup Message
+            $message = '<div data-import-step="1">';
+            $message .= '<table class="widefat" style="border: 0 !important;">';
+            foreach ($table as $title => $val) {
+                $message .= '<tr>';
+                $message .= '<td>' . $title . '</td>';
+                $message .= '<td>' . $val . '</td>';
+                $message .= '</tr>';
+            }
+            $message .= '</table>';
+            $message .= '<p class="submit" style="float: none; margin: 25px 10px 0 10px;"><input type="submit" name="" id="import-button-action" class="button button-primary" value="' . __('Start', 'simple-import-export') . '" style="padding: 6px 50px;"><span class="spinner"></span></p>';
+            $message .= '</div>';
+
+            $message .= '<div data-import-step="2" style="display:none;">';
+            $message .= '<input type="hidden" id="import_number_all" value="' . $number_item . '">';
+            $message .= '<p>';
+            $message .= __('Number Row', 'simple-import-export') . ': ';
+            $message .= '<span id="import_num_page_process">0</span> / ' . $number_item . '</span>';
+            $message .= '</p>';
+            $message .= '<p><progress id="import_html_progress" value="0" max="100" style="height: 40px;width: 100%;"></progress></p>';
+            $message .= __('Please do not close the browser until the operation is finished', 'simple-import-export');
+            $message .= '</div>';
+
+            $message .= '<div data-import-step="3" style="display:none;">';
+            $message .= '<p style="text-align: center;background: #fff;padding: 15px;border-radius: 15px;width: 50%;margin: 15px auto;">';
+            $message .= __('Done', 'simple-import-export');
+            $message .= '</p>';
+            $message .= '</div>';
+
+            // Return
+            wp_send_json_success(['message' => $message], 200);
+        }
+        exit;
+    }
+
+    public function import_ajax_step_2()
+    {
+        # Create Default Obj
+        $return = [
+            'process_status' => 'complete',
+            'number_process' => 0,
+            'percentage' => 0
+        ];
+
+        # Check is Ajax WordPress
+        if (wp_doing_ajax()) {
+
+            # Option Name
+            $option_name = 'simple_import_export_user_' . get_current_user_id();
+            $option = get_option($option_name, ['per_page' => 50, 'list' => []]);
+
+            # Type $ Extension
+            $type = $option['input']['type'];
+            $extension = $option['input']['extension'];
+
+            # Number Process Per Query
+            $number_per_query = $option['per_page'];
+
+            # Check Number Process
+            $i = 0;
+            $list_option = get_option($option_name);
+            $list = $_saved_list = $list_option['list'];
+            $new_number_process = $list_option['number_process'] + $number_per_query;
+            $items = [];
+            foreach ($list as $key => $item) {
+                if ($i > $number_per_query) {
+                    break;
+                }
+
+                // Run Item
+                do_action('simple_import_handle_item', $item, $key, $type, $extension, $option);
+
+                // Append To This Process Items
+                $items[] = $item;
+
+                // Removed From List
+                unset($_saved_list[$key]);
+
+                // Add++
+                $i++;
+            }
+
+            // Save Option
+            $option['number_process'] = $new_number_process;
+            $option['list'] = array_values($_saved_list);
+            update_option($option_name, $option, 'no');
+
+            # Check End
+            if ($_REQUEST['number_all'] > $new_number_process) {
+                # Calculate Number Process
+                $return['number_process'] = $new_number_process;
+
+                # Calculate Per
+                $return['percentage'] = round(($return['number_process'] / $_GET['number_all']) * 100);
+
+                # Set Process
+                $return['process_status'] = 'incomplete';
+
+            } else {
+
+                $return['number_process'] = $_REQUEST['number_all'];
+                $return['percentage'] = 100;
+                delete_option($option_name);
+
+                // After Completed Process
+                do_action('simple_import_after_completed_process', $type, $extension, $option);
+            }
+
+            # Export Data
+            wp_send_json($return);
+            exit;
         }
     }
 
@@ -385,15 +479,6 @@ class Admin
         }*/
 
         return $data;
-    }
-
-    public function woocommerce_product_import($data, $type, $extension)
-    {
-        if ($type != 'woocommerce_product') {
-            return;
-        }
-
-        // Do Work
     }
 
 }

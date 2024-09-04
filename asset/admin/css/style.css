@@ -19,24 +19,19 @@
     color: #6d6d6d;
 }
 
-/* Dashicon logo */
-.simple_import_export span.dashicons-randomize {
-    font-size: 25px;
-    margin-right: 5px;
-    vertical-align: -4px;
+.simple_import_export_d_none {
+    display: none;
 }
 
-/* add cursor */
 .simple_import_export .cursor-pointer {
     cursor: pointer;
 }
 
-/* Top Content wp list table */
-.wlt-top-content {
-    width: 95.5%;
-    min-height: 150px;
-    margin: 25px 10px;
-    background: #fff;
+#simple-import-alert {
+    margin: 0 5px;
+    border: 1px solid #e3e3e3;
+    padding: 15px;
     border-radius: 10px;
-    padding: 20px;
+    display: none;
+    background: #fff;
 }

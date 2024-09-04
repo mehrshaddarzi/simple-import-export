@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Simple Import Export Data
- * Description: Simple Import/Export WordPress and WooCommerce Data
+ * Description: Simple Import/Export Data at WordPress
  * Plugin URI:  https://realwp.net
  * Version:     1.3.0
  * Author:      Mehrshad Darzi
@@ -171,6 +171,9 @@ class Simple_Import_Export
         require_once dirname(__FILE__) . '/inc/ParsiDate.php';
         require_once dirname(__FILE__) . '/inc/Custom.php';
         require_once dirname(__FILE__) . '/inc/core/utility.php';
+
+        // Models
+        require_once dirname(__FILE__) . '/model/Posts.php';
     }
 
     /**
