@@ -32,15 +32,26 @@ class Admin
 
     public function admin_menu()
     {
-        add_menu_page(
-            __('Import/Export', 'simple-import-export'),
-            __('Import/Export', 'simple-import-export'),
-            'manage_options',
-            self::$page_slug,
-            [$this, 'page'],
-            'dashicons-database',
-            90
-        );
+        $menu = apply_filters('simple_import_export_admin_menu', [
+            'menu_title' => __('Import/Export', 'simple-import-export'),
+            'page_title' => __('Simple Import / Export', 'simple-import-export'),
+            'capability' => 'manage_options',
+            'icon' => 'dashicons-database',
+            'position' => 90
+        ]);
+
+        if (!empty($menu['menu_title'])) {
+
+            add_menu_page(
+                $menu['page_title'],
+                $menu['menu_title'],
+                $menu['capability'],
+                self::$page_slug,
+                [$this, 'page'],
+                $menu['icon'],
+                $menu['position']
+            );
+        }
     }
 
     public function admin_assets()
@@ -450,9 +461,15 @@ class Admin
             return $data;
         }
 
+        // Pre Handle
+        $pre = apply_filters('pre_simple_prepare_data_for_import_json', null, $target_file);
+        if (!is_null($pre)) {
+            return $pre;
+        }
+
         $parseJson = Helper::readJson($target_file);
         if ($parseJson['status']) {
-            return $parseJson['data'];
+            return apply_filters('simple_import_export_prepare_json_file_rows', $parseJson['data']);
         }
 
         return $data;
@@ -468,13 +485,18 @@ class Admin
             return $data;
         }
 
+        // Pre Handle
+        $pre = apply_filters('pre_simple_prepare_data_for_import_excel', null, $target_file);
+        if (!is_null($pre)) {
+            return $pre;
+        }
+
         // include Package
         require_once \Simple_Import_Export::$plugin_path . '/libs/simplexlsx/vendor/autoload.php';
         if ($xlsx = SimpleXLSX::parse($target_file)) {
-            return $xlsx->rows();
+            return apply_filters('simple_import_export_prepare_excel_file_rows', $xlsx->rows(), $xlsx);
         }
-
-        /*else {
+        /*else{
             echo SimpleXLSX::parseError();
         }*/
 

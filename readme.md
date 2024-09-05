@@ -1,15 +1,13 @@
 ### Simple Process For Big Data in WordPress ( Import/Export )
 
-
 <img src="https://raw.githubusercontent.com/mehrshaddarzi/simple-import-export/master/screenshot.jpg">
-
 
 #### Add New Export Method
 
 ```php
 add_filter('simple_import_export_type_lists_at_export', [$this, 'method']);
 add_filter('simple_prepare_data_for_export', [$this, 'export'], 20, 3);
-add_action('simple_import_export_form_fields_export', [$this, 'export_field']);
+add_action('simple_import_export_form_fields_export', [$this, 'export_custom_form_field']);
 
 public function method($array)
 {
@@ -58,7 +56,7 @@ public function export($data, $type, $extension)
     return $data;
 }
 
-public function export_field()
+public function export_custom_form_field()
 {
     ?>
     <tr class="form-field form-required simple_import_export_d_none" data-export-type="wp_posts">
@@ -91,7 +89,7 @@ public function export_field()
 ```php
 add_filter('simple_import_export_type_lists_at_import', [$this, 'method']);
 add_action('simple_import_handle_item', [$this, 'import_row'], 10, 5);
-add_action('simple_import_export_form_fields_import', [$this, 'import_field']);
+add_action('simple_import_export_form_fields_import', [$this, 'import_custom_form_field']);
 
 public function method($array)
 {
@@ -125,7 +123,7 @@ public function import_row($row, $key, $type, $extension, $option)
     }
 }
 
-public function import_field()
+public function import_custom_form_field()
 {
     ?>
     <tr class="form-field form-required simple_import_export_d_none" data-import-type="wp_posts">
@@ -153,7 +151,7 @@ public function import_field()
 }
 ```
 
-#### How to New Extension File?
+#### How to Set up New Extension File?
 
 By default, this plugin support `Excel`and `Json` File For import/export.
 
@@ -165,4 +163,39 @@ do_action('simple_export_handle_file', $data, $type, $extension);
 
 // Get File Content For Start Import Process
 apply_filters('simple_prepare_data_for_import', [], $target_file, $type, $extension);
+```
+
+#### How to disable Import Or Export Form View?
+
+```php
+// Disable Export Form
+add_filter('simple_import_export_enable_export_system', '__return_false');
+
+// Disable Import Form
+add_filter('simple_import_export_enable_import_system', '__return_false');
+```
+
+### Add Custom Content to Page
+
+```php
+// Top Page
+do_action('simple_import_export_page_header');
+
+// Bottom Page
+do_action('simple_import_export_page_footer');
+```
+
+### Change Admin Menu Option
+
+```php
+add_filter('simple_import_export_admin_menu', 'wp_admin_custom_menu_name', 10, 1);
+function wp_admin_custom_menu_name($args) {
+    return [
+            'menu_title' => __('Import/Export', 'simple-import-export'),
+            'page_title' => __('Simple Import / Export', 'simple-import-export'),
+            'capability' => 'manage_options',
+            'icon' => 'dashicons-database',
+            'position' => 90
+   ];
+}
 ```

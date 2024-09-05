@@ -121,14 +121,20 @@ class Posts
             return;
         }
 
+        // Check First Item
+        if ($row[0] == "ID") {
+            return;
+        }
+
+        // Check Rows
         if (isset($row[0]) and !empty($row[0]) and is_numeric($row[0])) {
 
-            $post_id = (int)$row[0]; // ID
+            $post_id = (int)$row[0]; //ID
             $post = get_post($post_id);
             if (!is_null($post)) {
 
                 $before_post_title = $post->post_title;
-                $new_title = trim($row[1]);
+                $new_title = trim($row[1]); //Title
                 if (!empty($new_title) and $new_title != $before_post_title and $option['input']['post_status'] == $post->post_status) {
 
                     $arg = array(
