@@ -331,6 +331,11 @@ class Admin
             // Remove file From Server
             @unlink($target_file);
 
+            // Check Error
+            if (is_wp_error($data)) {
+                wp_send_json_error(['message' => $data->get_error_message()], 400);
+            }
+
             // Show If Empty
             if (empty($data)) {
                 wp_send_json_error(['message' => __('List is empty', 'simple-import-export')], 400);
