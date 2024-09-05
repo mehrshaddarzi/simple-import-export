@@ -101,6 +101,20 @@ class Admin
         ]);
     }
 
+    public static function get_accept_import_file_format(): array
+    {
+        $list = [];
+        $extensionList = self::get_import_extensions();
+        if (isset($extensionList['excel'])) {
+            $list[] = '.xlsx';
+        }
+        if (isset($extensionList['json'])) {
+            $list[] = '.json';
+        }
+
+        return apply_filters('simple_import_export_accept_import_file_format', $list);
+    }
+
     public static function get_import_types()
     {
         return apply_filters('simple_import_export_type_lists_at_import', []);
@@ -170,8 +184,9 @@ class Admin
             @mkdir($defaultPath, 0777, true);
         }
 
-        // Remove Last PDF File
-        $expire = strtotime('-1 DAYS');
+        // Remove Last File
+        $day = apply_filters('simple_import_export_max_number_day_archive_file', 1);
+        $expire = strtotime("-$day days");
         $files = glob($defaultPath . '*');
         foreach ($files as $file) {
             if (!is_file($file)) {
@@ -184,7 +199,7 @@ class Admin
         }
 
         // Create FileName
-        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.xls';
+        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.xlsx';
         $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
 
         // Save File in Disk
@@ -230,7 +245,8 @@ class Admin
         }
 
         // Remove Last File
-        $expire = strtotime('-1 DAYS');
+        $day = apply_filters('simple_import_export_max_number_day_archive_file', 1);
+        $expire = strtotime("-$day days");
         $files = glob($defaultPath . '*');
         foreach ($files as $file) {
             if (!is_file($file)) {

@@ -1,6 +1,6 @@
 <div class="wrap">
     <h1 id="simple-import-export-h1">
-        <?php echo esc_html( get_admin_page_title() ); ?>
+        <?php echo esc_html(get_admin_page_title()); ?>
     </h1>
 
     <?php
@@ -112,7 +112,14 @@
                             </label>
                         </th>
                         <td>
-                            <input type="file" name="attachment" required/>
+                            <?php
+                            $acceptFileFormat = \Simple_Import_Export\Admin::get_accept_import_file_format();
+                            ?>
+                            <input type="file"
+                                   name="attachment"
+                                   required="required"
+                                <?php echo(!empty($acceptFileFormat) ? 'accept="' . implode(",", $acceptFileFormat) . '"' : ''); ?>
+                            />
                         </td>
                     </tr>
 
