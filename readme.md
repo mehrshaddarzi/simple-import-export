@@ -88,7 +88,7 @@ public function export_custom_form_field()
 
 ```php
 add_filter('simple_import_export_type_lists_at_import', [$this, 'method']);
-add_action('simple_import_handle_item', [$this, 'import_row'], 10, 5);
+add_filter('simple_import_handle_item', [$this, 'import_row'], 10, 6);
 add_action('simple_import_export_form_fields_import', [$this, 'import_custom_form_field']);
 
 public function method($array)
@@ -97,10 +97,10 @@ public function method($array)
     return $array;
 }
 
-public function import_row($row, $key, $type, $extension, $option)
+public function import_row($return, $row, $key, $type, $extension, $option)
 {
     if ($type != 'wp_posts') {
-        return;
+        return $return;
     }
 
     if (isset($row[0]) and !empty($row[0]) and is_numeric($row[0])) {
@@ -108,19 +108,22 @@ public function import_row($row, $key, $type, $extension, $option)
         $post_id = (int)$row[0]; // ID
         $post = get_post($post_id);
         if (!is_null($post)) {
+            return new \WP_Error('item_import_error', 'Invalid Post ID With: ' . $post_id);
+        }
+       
+        $before_post_title = $post->post_title;
+        $new_title = trim($row[1]); // Title
+        if (!empty($new_title) and $new_title != $before_post_title and $option['input']['post_status'] == $post->post_status) {
 
-            $before_post_title = $post->post_title;
-            $new_title = trim($row[1]);
-            if (!empty($new_title) and $new_title != $before_post_title and $option['input']['post_status'] == $post->post_status) {
-
-                $arg = array(
-                    'ID' => $post_id,
-                    'post_title' => $new_title
-                );
-                wp_update_post($arg);
-            }
+            $arg = array(
+                'ID' => $post_id,
+                'post_title' => $new_title
+            );
+            wp_update_post($arg);
         }
     }
+    
+    return $return;
 }
 
 public function import_custom_form_field()

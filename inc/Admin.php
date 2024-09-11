@@ -379,12 +379,20 @@ class Admin
             $message .= '</p>';
             $message .= '<p><progress id="import_html_progress" value="0" max="100" style="height: 40px;width: 100%;"></progress></p>';
             $message .= __('Please do not close the browser until the operation is finished', 'simple-import-export');
+            $message .= '<div class="simple-import-export-info-list">';
+            $message .= '<ol>';
+            $message .= '</ol>';
+            $message .= '</div>';
             $message .= '</div>';
 
             $message .= '<div data-import-step="3" style="display:none;">';
             $message .= '<p style="text-align: center;background: #fff;padding: 15px;border-radius: 15px;width: 50%;margin: 15px auto;">';
             $message .= __('Done', 'simple-import-export');
             $message .= '</p>';
+            $message .= '<div class="simple-import-export-info-list">';
+            $message .= '<ol>';
+            $message .= '</ol>';
+            $message .= '</div>';
             $message .= '</div>';
 
             // Return
@@ -399,7 +407,8 @@ class Admin
         $return = [
             'process_status' => 'complete',
             'number_process' => 0,
-            'percentage' => 0
+            'percentage' => 0,
+            'info' => []
         ];
 
         # Check is Ajax WordPress
@@ -421,17 +430,19 @@ class Admin
             $list_option = get_option($option_name);
             $list = $_saved_list = $list_option['list'];
             $new_number_process = $list_option['number_process'] + $number_per_query;
-            $items = [];
+            $info = [];
             foreach ($list as $key => $item) {
                 if ($i > $number_per_query) {
                     break;
                 }
 
                 // Run Item
-                do_action('simple_import_handle_item', $item, $key, $type, $extension, $option);
+                $run = apply_filters('simple_import_handle_item', true, $item, $key, $type, $extension, $option);
 
-                // Append To This Process Items
-                $items[] = $item;
+                // Check Error
+                if (is_wp_error($run)) {
+                    $info[] = $run->get_error_message();
+                }
 
                 // Removed From List
                 unset($_saved_list[$key]);
@@ -447,6 +458,7 @@ class Admin
 
             # Check End
             if ($_REQUEST['number_all'] > $new_number_process) {
+
                 # Calculate Number Process
                 $return['number_process'] = $new_number_process;
 
@@ -456,13 +468,16 @@ class Admin
                 # Set Process
                 $return['process_status'] = 'incomplete';
 
+                # Return Info
+                $return['info'] = $info;
             } else {
 
+                # Delete Option
                 $return['number_process'] = $_REQUEST['number_all'];
                 $return['percentage'] = 100;
                 delete_option($option_name);
 
-                // After Completed Process
+                # After Completed Process
                 do_action('simple_import_after_completed_process', $type, $extension, $option);
             }
 

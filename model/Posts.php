@@ -20,7 +20,7 @@ class Posts
         // Import
         add_filter('simple_import_export_type_lists_at_import', [$this, 'method']);
         add_action('simple_import_export_form_fields_import', [$this, 'import_field']);
-        add_action('simple_import_handle_item', [$this, 'import_row'], 10, 5);
+        add_filter('simple_import_handle_item', [$this, 'import_row'], 10, 6);
     }
 
     public function method($array)
@@ -115,15 +115,15 @@ class Posts
         <?php
     }
 
-    public function import_row($row, $key, $type, $extension, $option)
+    public function import_row($return, $row, $key, $type, $extension, $option)
     {
         if ($type != self::$key) {
-            return;
+            return $return;
         }
 
         // Check First Item
         if ($row[0] == "ID") {
-            return;
+            return $return;
         }
 
         // Check Rows
@@ -131,20 +131,25 @@ class Posts
 
             $post_id = (int)$row[0]; //ID
             $post = get_post($post_id);
-            if (!is_null($post)) {
+            if (is_null($post)) {
+                return new \WP_Error('item_import_error', 'پست با شناسه ' . $post_id . ' یافت نشد.');
+            }
 
-                $before_post_title = $post->post_title;
-                $new_title = trim($row[1]); //Title
-                if (!empty($new_title) and $new_title != $before_post_title and $option['input']['post_status'] == $post->post_status) {
+            $before_post_title = $post->post_title;
+            $new_title = trim($row[1]); //Title
+            if (!empty($new_title) and $new_title != $before_post_title and $option['input']['post_status'] == $post->post_status) {
 
-                    $arg = array(
-                        'ID' => $post_id,
-                        'post_title' => $new_title
-                    );
-                    wp_update_post($arg);
+                $updated = wp_update_post(array(
+                    'ID' => $post_id,
+                    'post_title' => $new_title
+                ));
+                if (is_wp_error($updated)) {
+                    return new \WP_Error('item_import_error', 'خطا در آپدیت پست با شناسه ' . $post_id . ': ' . $updated->get_error_message());
                 }
             }
         }
+
+        return $return;
     }
 }
 
