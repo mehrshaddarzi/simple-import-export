@@ -199,7 +199,7 @@ class Admin
         }
 
         // Create FileName
-        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.xlsx';
+        $fileName = str_ireplace("_", "-", $type) . '-' . current_time('timestamp') . '-' . get_current_user_id() . '.xlsx';
         $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
 
         // Save File in Disk
@@ -259,7 +259,7 @@ class Admin
         }
 
         // Create FileName
-        $fileName = current_time('timestamp') . '-' . get_current_user_id() . '.json';
+        $fileName = str_ireplace("_", "-", $type) . '-' . current_time('timestamp') . '-' . get_current_user_id() . '.json';
         $path = rtrim($defaultPath, "/") . '/' . ltrim($fileName, "/");
 
         // Save File in Disk

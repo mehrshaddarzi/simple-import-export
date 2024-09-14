@@ -66,6 +66,9 @@ class Posts
             'post_type' => trim($_REQUEST['post_type']),
             'fields' => 'all'
         ]);
+        if (empty($posts)) {
+            return $data;
+        }
 
         // Setup PHP Array
         $columns = array(

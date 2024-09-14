@@ -71,6 +71,14 @@ class i18n
             'Done' => 'انجام شد',
             'Post Status' => 'وضعیت پست',
             'Start' => 'شروع',
+            'WooCommerce Products' => 'محصولات ووکامرس',
+            'Simple' => 'ساده',
+            'Variable' => 'متغیر',
+            'Product Type' => 'نوع محصول',
+            'Product Status' => 'وضعیت محصول',
+            'Publish' => 'انتشار یافته',
+            'Draft' => 'پیش نویس',
+            'Product Category' => 'دسته بندی محصولات',
         ];
 
         if (in_array($orig, array_keys($list))) {
