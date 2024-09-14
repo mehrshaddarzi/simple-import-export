@@ -2,8 +2,6 @@
 
 namespace Simple_Import_Export\Model;
 
-use Simple_Import_Export\Helper;
-
 class Products
 {
 
@@ -19,7 +17,7 @@ class Products
 
         // Import
         add_filter('simple_import_export_type_lists_at_import', [$this, 'method']);
-        add_action('simple_import_export_form_fields_import', [$this, 'import_field']);
+        #add_action('simple_import_export_form_fields_import', [$this, 'import_field']);
         add_filter('simple_import_handle_item', [$this, 'import_row'], 10, 6);
     }
 
@@ -252,7 +250,16 @@ class Products
                         foreach ($children->get_attributes() as $product_attributes_slug => $product_attributes_array) {
                             $sanitize_slug = str_ireplace("pa_", "", wc_sanitize_taxonomy_name($product_attributes_slug));
                             if ($sanitize_slug == trim($taxonomy->attribute_name)) {
-                                $val = $children->get_attribute($product_attributes_slug);
+
+                                // @see https://wp-kama.com/plugin/woocommerce/function/wc_get_formatted_variation
+                                if (taxonomy_exists($product_attributes_slug)) {
+                                    $term = get_term_by('slug', $children->get_attribute($product_attributes_slug), $product_attributes_slug);
+                                    if (!is_wp_error($term) && $term && null !== $term->name && '' !== $term->name) {
+                                        $val = $term->name;
+                                    }
+                                } else {
+                                    $val = rawurldecode($children->get_attribute($product_attributes_slug));
+                                }
                             }
                         }
                         $item[] = $val;
@@ -271,8 +278,7 @@ class Products
     public function import_field()
     {
         ?>
-        <tr class="form-field form-required simple_import_export_d_none"
-            data-import-type="<?php echo self::$key; ?>">
+        <tr class="form-field form-required simple_import_export_d_none" data-import-type="<?php echo self::$key; ?>">
             <th scope="row">
                 <label for="post_status">
                     <span><?php _e('Post Status', 'simple-import-export'); ?></span>
