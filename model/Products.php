@@ -170,14 +170,17 @@ class Products
         // Setup PHP Array
         $columns = array(
             'id',
-            'title',
             'type',
             'parent_id',
+            'title',
+            'sku',
             'manage_stock',
             'stock_quantity',
             'regular_price',
             'sale_price',
-            'price'
+            'price',
+            'category',
+            'tags'
         );
 
         // Setup List Of Attributes
@@ -198,24 +201,25 @@ class Products
 
                 $item = [
                     $product->get_id(),
-                    $product->get_name(),
                     $product->get_type(),
                     $product->get_parent_id(),
+                    $product->get_name(),
+                    $product->get_sku(),
                     ($product->managing_stock() ? 'yes' : 'no'),
                     $product->get_stock_quantity(),
                     $product->get_regular_price(),
                     $product->get_sale_price(),
-                    $product->get_price()
+                    $product->get_price(),
+                    implode(",", wc_get_product_terms($product->get_id(), 'product_cat', array('fields' => 'names'))),
+                    implode(",", wc_get_product_terms($product->get_id(), 'product_tag', array('fields' => 'names')))
                 ];
 
                 foreach (wc_get_attribute_taxonomies() as $taxonomy) {
                     $val = '';
-                    if ($product->get_type() == "simple") {
-                        foreach ($product->get_attributes() as $product_attributes_slug => $product_attributes_array) {
-                            $sanitize_slug = str_ireplace("pa_", "", wc_sanitize_taxonomy_name($product_attributes_slug));
-                            if ($sanitize_slug == trim($taxonomy->attribute_name)) {
-                                $val = implode(",", self::get_attribute_options($product->get_id(), $product_attributes_array));
-                            }
+                    foreach ($product->get_attributes() as $product_attributes_slug => $product_attributes_array) {
+                        $sanitize_slug = str_ireplace("pa_", "", wc_sanitize_taxonomy_name($product_attributes_slug));
+                        if ($sanitize_slug == trim($taxonomy->attribute_name)) {
+                            $val = implode(",", self::get_attribute_options($product->get_id(), $product_attributes_array));
                         }
                     }
                     $item[] = $val;
@@ -234,15 +238,18 @@ class Products
 
                     $item = [
                         $children->get_id(),
-                        '',
-                        // $children->get_formatted_name(),
                         $children->get_type(),
                         $children->get_parent_id(),
+                        '',
+                        // $children->get_formatted_name(),
+                        $children->get_sku(),
                         ($children->managing_stock() ? 'yes' : 'no'),
                         $children->get_stock_quantity(),
                         $children->get_regular_price(),
                         $children->get_sale_price(),
-                        $children->get_price()
+                        $children->get_price(),
+                        implode(",", wc_get_product_terms($children->get_id(), 'product_cat', array('fields' => 'names'))),
+                        implode(",", wc_get_product_terms($children->get_id(), 'product_tag', array('fields' => 'names')))
                     ];
 
                     foreach (wc_get_attribute_taxonomies() as $taxonomy) {
