@@ -432,7 +432,7 @@ class Admin
             $new_number_process = $list_option['number_process'] + $number_per_query;
             $info = [];
             foreach ($list as $key => $item) {
-                if ($i > $number_per_query) {
+                if ($i >= $number_per_query) {
                     break;
                 }
 
@@ -456,6 +456,9 @@ class Admin
             $option['list'] = array_values($_saved_list);
             update_option($option_name, $option, 'no');
 
+            // Return Info
+            $return['info'] = $info;
+
             # Check End
             if ($_REQUEST['number_all'] > $new_number_process) {
 
@@ -468,8 +471,6 @@ class Admin
                 # Set Process
                 $return['process_status'] = 'incomplete';
 
-                # Return Info
-                $return['info'] = $info;
             } else {
 
                 # Delete Option

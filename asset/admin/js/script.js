@@ -93,12 +93,20 @@ jQuery(document).ready(function ($) {
                 '_': Date.now()
             },
             success: function (data) {
+
+                // Push Info List
+                if (data.info.length > 0) {
+                    let html = '';
+                    data.info.forEach(function (item, index) {
+                        html += `<li>${item}</li>`;
+                    });
+                    $(".simple-import-export-info-list ol").append(html);
+                }
+
+                // Check is Completed
                 if (data.process_status === "complete") {
 
-                    // Completed Process
                     $("[data-import-step=2]").hide();
-
-
                     $("[data-import-step=3]").show();
 
                 } else {
@@ -108,15 +116,6 @@ jQuery(document).ready(function ($) {
 
                     // Get process Percentage
                     jQuery("progress#import_html_progress").attr("value", data.percentage);
-
-                    // Push Info List
-                    if (data.info.length > 0) {
-                        let html = '';
-                        data.info.forEach(function (item, index) {
-                            html += `<li>${item}</li>`;
-                        });
-                        $(".simple-import-export-info-list ol").append(html);
-                    }
 
                     // Again request
                     var _this = this;
