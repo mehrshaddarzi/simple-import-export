@@ -176,7 +176,7 @@
                         <td>
                             <select name="per_page">
                                 <?php
-                                foreach ([1, 5, 10, 50, 100, 150, 200, 300, 500, 1000, 2000] as $k) {
+                                foreach ([1, 2, 3, 5, 10, 50, 100, 150, 200, 300, 500, 1000, 2000] as $k) {
                                     ?>
                                     <option value="<?php echo $k; ?>" <?php echo($k == "50" ? 'selected' : ''); ?>>
                                         <?php echo number_format($k); ?>

@@ -192,7 +192,7 @@ class Helper
         // Get SQL
         // echo $query->request;
         // exit;
-        /*foreach ( as $ID) {
+        /*foreach ($query->posts as $ID) {
             $list[] = $ID;
         }*/
 

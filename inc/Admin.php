@@ -453,7 +453,7 @@ class Admin
 
             // Save Option
             $option['number_process'] = $new_number_process;
-            $option['list'] = array_values($_saved_list);
+            $option['list'] = (apply_filters('simple_import_use_array_values_saved', true, $type) ? array_values($_saved_list) : $_saved_list);
             update_option($option_name, $option, 'no');
 
             // Return Info
@@ -523,7 +523,7 @@ class Admin
         }
 
         // Pre Handle
-        $pre = apply_filters('pre_simple_prepare_data_for_import_excel', null, $target_file);
+        $pre = apply_filters('pre_simple_prepare_data_for_import_excel', null, $target_file, $type);
         if (!is_null($pre)) {
             return $pre;
         }
@@ -531,7 +531,7 @@ class Admin
         // include Package
         require_once \Simple_Import_Export::$plugin_path . '/libs/simplexlsx/vendor/autoload.php';
         if ($xlsx = SimpleXLSX::parse($target_file)) {
-            return apply_filters('simple_import_export_prepare_excel_file_rows', $xlsx->rows(), $xlsx);
+            return apply_filters('simple_import_export_prepare_excel_file_rows', $xlsx->rows(), $xlsx, $type);
         }
         /*else{
             echo SimpleXLSX::parseError();

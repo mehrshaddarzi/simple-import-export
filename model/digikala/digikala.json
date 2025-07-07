@@ -1,0 +1,2257 @@
+{
+  "status": 200,
+  "data": {
+    "product": {
+      "id": 19283460,
+      "title_fa": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+      "title_en": "",
+      "url": {
+        "base": null,
+        "uri": "/product/dkp-19283460/تی-شرت-آستین-کوتاه-مردانه-رانژ-مدل-25ra05d20m-2712-01"
+      },
+      "status": "marketable",
+      "has_quick_view": false,
+      "data_layer": {
+        "brand": "رانژ",
+        "category": "[RW,تی شرت و پولو شرت مردانه]",
+        "metric6": 0,
+        "dimension2": 0,
+        "dimension6": 0,
+        "dimension7": "none",
+        "dimension9": 0,
+        "dimension11": 0,
+        "dimension20": "marketable",
+        "item_category2": "مد و پوشاک",
+        "item_category3": "مردانه",
+        "item_category4": "لباس مردانه",
+        "item_category5": "تی شرت مردانه"
+      },
+      "product_type": "product",
+      "test_title_fa": "",
+      "test_title_en": "",
+      "digiplus": {
+        "services": [
+          "پشتیبانی اختصاصی"
+        ],
+        "service_list": [
+          {
+            "title": "پشتیبانی اختصاصی"
+          }
+        ],
+        "services_summary": [
+
+        ],
+        "is_jet_eligible": false,
+        "cash_back": 0,
+        "is_general_location_jet_eligible": false,
+        "fast_shipping_text": null
+      },
+      "images": {
+        "main": {
+          "storage_ids": [
+
+          ],
+          "url": [
+            "https://dkstatics-public.digikala.com/digikala-products/147d611ceae158fb77fcff65d43c2d55c4b6a8b5_1747727182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+          ],
+          "thumbnail_url": null,
+          "temporary_id": null,
+          "webp_url": [
+            "https://dkstatics-public.digikala.com/digikala-products/147d611ceae158fb77fcff65d43c2d55c4b6a8b5_1747727182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+          ]
+        },
+        "list": [
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/84bc7fe4df8df7bbabcf62956c53dbc5abf46f3c_1747721439.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/84bc7fe4df8df7bbabcf62956c53dbc5abf46f3c_1747721439.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/0576ed5e0e4530d75fa3210fb3ebdc2d5269a10f_1747721524.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/0576ed5e0e4530d75fa3210fb3ebdc2d5269a10f_1747721524.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/8f90818a292764eef0033a9f17fa788ee0f86e03_1747721472.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/8f90818a292764eef0033a9f17fa788ee0f86e03_1747721472.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/ceb9a46f82c64de844ee844cffdffd58ff2bba3d_1747721493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/ceb9a46f82c64de844ee844cffdffd58ff2bba3d_1747721493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/48b9353d0ec6516c6f0e672c94d045f92fff8b24_1747721493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/48b9353d0ec6516c6f0e672c94d045f92fff8b24_1747721493.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          },
+          {
+            "storage_ids": [
+
+            ],
+            "url": [
+              "https://dkstatics-public.digikala.com/digikala-products/8291179d9295b6cc0c14c07b79a01817a012fd4c_1747721472.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+            ],
+            "thumbnail_url": null,
+            "temporary_id": null,
+            "webp_url": [
+              "https://dkstatics-public.digikala.com/digikala-products/8291179d9295b6cc0c14c07b79a01817a012fd4c_1747721472.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/format,webp/quality,q_90"
+            ]
+          }
+        ]
+      },
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "colors": [
+
+      ],
+      "default_variant": {
+        "id": 67733497,
+        "lead_time": 1,
+        "rank": 100,
+        "rate": 0,
+        "statistics": null,
+        "status": "marketable",
+        "properties": {
+          "is_fast_shipping": false,
+          "is_ship_by_seller": true,
+          "is_multi_warehouse": false,
+          "has_similar_variants": false,
+          "is_rural": false,
+          "in_digikala_warehouse": false
+        },
+        "digiplus": {
+          "services": [
+            "پشتیبانی اختصاصی"
+          ],
+          "service_list": [
+            {
+              "title": "پشتیبانی اختصاصی"
+            }
+          ],
+          "services_summary": [
+
+          ],
+          "is_jet_eligible": false,
+          "cash_back": 0,
+          "is_general_location_jet_eligible": false,
+          "fast_shipping_text": null
+        },
+        "warranty": {
+          "id": 272,
+          "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+          "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+        },
+        "size": {
+          "id": 100175,
+          "title": "S"
+        },
+        "seller": {
+          "id": 563798,
+          "title": "فروشگاه رانژ",
+          "code": "CZ4T5",
+          "url": "https://www.digikala.com/seller/CZ4T5/",
+          "rating": {
+            "total_rate": 88,
+            "total_count": 4243,
+            "commitment": 100,
+            "no_return": 99.9,
+            "on_time_shipping": 98.1
+          },
+          "properties": {
+            "is_trusted": true,
+            "is_official": true,
+            "is_roosta": false,
+            "is_new": false
+          },
+          "stars": 5,
+          "grade": {
+            "label": "عالی",
+            "color": "#00a049"
+          },
+          "logo": null,
+          "registration_date": "4 سال و 6 ماه"
+        },
+        "digiclub": {
+          "point": 89
+        },
+        "price": {
+          "selling_price": 8900000,
+          "rrp_price": 8900000,
+          "order_limit": 20,
+          "is_incredible": false,
+          "is_promotion": false,
+          "is_locked_for_digiplus": false,
+          "bnpl_active": false,
+          "discount_percent": 0,
+          "is_plus_early_access": false
+        },
+        "shipment_methods": {
+          "description": "موجود در انبار فروشنده و دیجی‌کالا",
+          "has_lead_time": false,
+          "providers": [
+            {
+              "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+              "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+              "has_lead_time": true,
+              "type": "digikala",
+              "label": {
+                "title": "توسط دیجی‌کالا",
+                "description": "تامین از 1 روز کاری دیگر"
+              },
+              "price": {
+                "text": "وابسته به سبد",
+                "value": null,
+                "is_free": false
+              },
+              "shipping_mode": "digikala",
+              "delivery_day": "tomorrow"
+            },
+            {
+              "title": "ارسال فروشنده از 1 روز کاری دیگر",
+              "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+              "has_lead_time": true,
+              "type": "seller",
+              "label": {
+                "title": "توسط فروشنده",
+                "description": null
+              },
+              "price": {
+                "text": "رایگان",
+                "value": null,
+                "is_free": true
+              },
+              "shipping_mode": "seller",
+              "delivery_day": "other_days"
+            }
+          ]
+        },
+        "has_importer_price": false,
+        "manufacture_price_not_exist": false,
+        "has_best_price_in_last_month": false,
+        "buy_box_notices": [
+
+        ],
+        "variant_badges": [
+
+        ]
+      },
+      "properties": {
+        "is_fast_shipping": false,
+        "is_ship_by_seller": true,
+        "free_shipping_badge": false,
+        "is_multi_warehouse": false,
+        "is_fake": false,
+        "has_gift": false,
+        "min_price_in_last_month": 8010000,
+        "is_non_inventory": false,
+        "is_ad": false,
+        "ad": [
+
+        ],
+        "is_jet_eligible": false,
+        "is_medical_supplement": false,
+        "has_printed_price": false
+      },
+      "badges": [
+
+      ],
+      "has_true_to_size": true,
+      "product_badges": [
+
+      ],
+      "videos": [
+
+      ],
+      "category": {
+        "id": 9470,
+        "title_fa": "تی شرت مردانه",
+        "title_en": "MEN TEE-SHIRTS",
+        "code": "men-tee-shirts",
+        "content_description": "",
+        "content_box": "",
+        "return_reason_alert": ""
+      },
+      "brand": {
+        "id": 21277,
+        "code": "ranj",
+        "title_fa": "رانژ",
+        "title_en": "RANJ",
+        "url": {
+          "base": null,
+          "uri": "/brand/ranj/"
+        },
+        "visibility": true,
+        "logo": {
+          "storage_ids": [
+
+          ],
+          "url": [
+            "https://dkstatics-public.digikala.com/digikala-brands/43364892a9b82961f6752e79ceeb9115172fa704_1609671802.jpg?x-oss-process=image/resize,m_lfit,h_120,w_120/quality,q_80"
+          ],
+          "thumbnail_url": null,
+          "temporary_id": null,
+          "webp_url": null
+        },
+        "is_premium": false,
+        "is_miscellaneous": false,
+        "is_name_similar": false
+      },
+      "review": {
+        "description": "شامل یک عدد تیشرت سفید با نوار مشکی در آستین ها و قد کار آستین کوتاه با یقه گرد میباشد. جنس پارچه آن یک رو شنبه کریستال و از 100% الیاف طبیعی تهیه شده است و فوق العاده راحت و زیبا و با استانداردهای جهانی طراحی شده است. همچنین مناسب استفاده روزمره، رسمی، ورزشی و مهمانی میباشد. در هنگام سفارش حتما از راهنمای انتخاب سایز استفاده کنید. شما میتوانید انواع تیشرت‌های آستین کوتاه و آستین بلند را در رنگ‌ها و طرح‌های مختلف از سایز S تا 7XL سفارش دهید. سابقه درخشان در صنعت مد و پوشاک همیشه در تولیدات و ارائه محصولات با کیفیت پیشتاز بوده است و الیاف مورد استفاده در محصولات همگی از پارچه‌های %100 طبیعی ساخته شده اند\n",
+        "attributes": [
+          {
+            "title": "جنس",
+            "values": [
+              "الیاف طبیعی",
+              "پنبه یکرو"
+            ]
+          },
+          {
+            "title": "قد",
+            "values": [
+              "روی باسن"
+            ]
+          },
+          {
+            "title": "تنخور لباس",
+            "values": [
+              "معمولی"
+            ]
+          },
+          {
+            "title": "مدل یقه",
+            "values": [
+              "گرد"
+            ]
+          },
+          {
+            "title": "کشور تولید کننده",
+            "values": [
+              "ایران"
+            ]
+          }
+        ]
+      },
+      "pros_and_cons": {
+        "advantages": [
+
+        ],
+        "disadvantages": [
+
+        ]
+      },
+      "suggestion": {
+        "count": 0,
+        "percentage": 0
+      },
+      "variants": [
+        {
+          "id": 67733497,
+          "lead_time": 1,
+          "rank": 100,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100175,
+            "title": "S"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733507,
+          "lead_time": 1,
+          "rank": 100,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100176,
+            "title": "M"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733517,
+          "lead_time": 1,
+          "rank": 99.9167,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100177,
+            "title": "L"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733522,
+          "lead_time": 1,
+          "rank": 99.9167,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100174,
+            "title": "XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4249,
+              "commitment": 99.5,
+              "no_return": 99.9,
+              "on_time_shipping": 98.4
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 17,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 4 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733530,
+          "lead_time": 1,
+          "rank": 100,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100172,
+            "title": "XXL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4244,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733536,
+          "lead_time": 1,
+          "rank": 99.9167,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100189,
+            "title": "3XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4249,
+              "commitment": 99.5,
+              "no_return": 99.9,
+              "on_time_shipping": 98.4
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 19,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733545,
+          "lead_time": 1,
+          "rank": 100,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100187,
+            "title": "4XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733548,
+          "lead_time": 1,
+          "rank": 100,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100185,
+            "title": "5XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733557,
+          "lead_time": 1,
+          "rank": 99.9167,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100183,
+            "title": "6XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4243,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 20,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        },
+        {
+          "id": 67733564,
+          "lead_time": 1,
+          "rank": 99.8,
+          "rate": 0,
+          "statistics": null,
+          "status": "marketable",
+          "properties": {
+            "is_fast_shipping": false,
+            "is_ship_by_seller": true,
+            "is_multi_warehouse": false,
+            "has_similar_variants": false,
+            "is_rural": false,
+            "in_digikala_warehouse": false
+          },
+          "digiplus": {
+            "services": [
+              "پشتیبانی اختصاصی"
+            ],
+            "service_list": [
+              {
+                "title": "پشتیبانی اختصاصی"
+              }
+            ],
+            "services_summary": [
+
+            ],
+            "is_jet_eligible": false,
+            "cash_back": 0,
+            "is_general_location_jet_eligible": false,
+            "fast_shipping_text": null
+          },
+          "warranty": {
+            "id": 272,
+            "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+            "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+          },
+          "size": {
+            "id": 100181,
+            "title": "7XL"
+          },
+          "seller": {
+            "id": 563798,
+            "title": "فروشگاه رانژ",
+            "code": "CZ4T5",
+            "url": "https://www.digikala.com/seller/CZ4T5/",
+            "rating": {
+              "total_rate": 88,
+              "total_count": 4244,
+              "commitment": 100,
+              "no_return": 99.9,
+              "on_time_shipping": 98.1
+            },
+            "properties": {
+              "is_trusted": true,
+              "is_official": true,
+              "is_roosta": false,
+              "is_new": false
+            },
+            "stars": 5,
+            "grade": {
+              "label": "عالی",
+              "color": "#00a049"
+            },
+            "logo": null,
+            "registration_date": "4 سال و 6 ماه"
+          },
+          "digiclub": {
+            "point": 89
+          },
+          "price": {
+            "selling_price": 8900000,
+            "rrp_price": 8900000,
+            "order_limit": 18,
+            "is_incredible": false,
+            "is_promotion": false,
+            "is_locked_for_digiplus": false,
+            "bnpl_active": false,
+            "discount_percent": 0,
+            "is_plus_early_access": false
+          },
+          "shipment_methods": {
+            "description": "موجود در انبار فروشنده و دیجی‌کالا",
+            "has_lead_time": false,
+            "providers": [
+              {
+                "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+                "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+                "has_lead_time": true,
+                "type": "digikala",
+                "label": {
+                  "title": "توسط دیجی‌کالا",
+                  "description": "تامین از 1 روز کاری دیگر"
+                },
+                "price": {
+                  "text": "وابسته به سبد",
+                  "value": null,
+                  "is_free": false
+                },
+                "shipping_mode": "digikala",
+                "delivery_day": "tomorrow"
+              },
+              {
+                "title": "ارسال فروشنده از 1 روز کاری دیگر",
+                "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+                "has_lead_time": true,
+                "type": "seller",
+                "label": {
+                  "title": "توسط فروشنده",
+                  "description": null
+                },
+                "price": {
+                  "text": "رایگان",
+                  "value": null,
+                  "is_free": true
+                },
+                "shipping_mode": "seller",
+                "delivery_day": "other_days"
+              }
+            ]
+          },
+          "has_importer_price": false,
+          "manufacture_price_not_exist": false,
+          "has_best_price_in_last_month": false,
+          "buy_box_notices": [
+
+          ],
+          "variant_badges": [
+
+          ]
+        }
+      ],
+      "second_default_variant": {
+        "id": 67733497,
+        "lead_time": 1,
+        "rank": 100,
+        "rate": 0,
+        "statistics": null,
+        "status": "marketable",
+        "properties": {
+          "is_fast_shipping": false,
+          "is_ship_by_seller": true,
+          "is_multi_warehouse": false,
+          "has_similar_variants": false,
+          "is_rural": false,
+          "in_digikala_warehouse": false
+        },
+        "digiplus": {
+          "services": [
+            "پشتیبانی اختصاصی"
+          ],
+          "service_list": [
+            {
+              "title": "پشتیبانی اختصاصی"
+            }
+          ],
+          "services_summary": [
+
+          ],
+          "is_jet_eligible": false,
+          "cash_back": 0,
+          "is_general_location_jet_eligible": false,
+          "fast_shipping_text": null
+        },
+        "warranty": {
+          "id": 272,
+          "title_fa": "گارانتی اصالت و سلامت فیزیکی کالا",
+          "title_en": "گارانتی اصالت و سلامت فیزیکی کالا"
+        },
+        "size": {
+          "id": 100175,
+          "title": "S"
+        },
+        "seller": {
+          "id": 563798,
+          "title": "فروشگاه رانژ",
+          "code": "CZ4T5",
+          "url": "https://www.digikala.com/seller/CZ4T5/",
+          "rating": {
+            "total_rate": 88,
+            "total_count": 4243,
+            "commitment": 100,
+            "no_return": 99.9,
+            "on_time_shipping": 98.1
+          },
+          "properties": {
+            "is_trusted": true,
+            "is_official": true,
+            "is_roosta": false,
+            "is_new": false
+          },
+          "stars": 5,
+          "grade": {
+            "label": "عالی",
+            "color": "#00a049"
+          },
+          "logo": null,
+          "registration_date": "4 سال و 6 ماه"
+        },
+        "digiclub": {
+          "point": 89
+        },
+        "price": {
+          "selling_price": 8900000,
+          "rrp_price": 8900000,
+          "order_limit": 20,
+          "is_incredible": false,
+          "is_promotion": false,
+          "is_locked_for_digiplus": false,
+          "bnpl_active": false,
+          "discount_percent": 0,
+          "is_plus_early_access": false
+        },
+        "shipment_methods": {
+          "description": "موجود در انبار فروشنده و دیجی‌کالا",
+          "has_lead_time": false,
+          "providers": [
+            {
+              "title": "ارسال دیجی‌کالا از 1 روز کاری دیگر",
+              "description": "این کالا پس از مدت زمان مشخص شده توسط فروشنده در انبار دیجی‌کالا تامین و آماده پردازش می‌گردد و توسط پیک دیجی‌کالا در بازه انتخابی ارسال خواهد شد.",
+              "has_lead_time": true,
+              "type": "digikala",
+              "label": {
+                "title": "توسط دیجی‌کالا",
+                "description": "تامین از 1 روز کاری دیگر"
+              },
+              "price": {
+                "text": "وابسته به سبد",
+                "value": null,
+                "is_free": false
+              },
+              "shipping_mode": "digikala",
+              "delivery_day": "tomorrow"
+            },
+            {
+              "title": "ارسال فروشنده از 1 روز کاری دیگر",
+              "description": "این کالا در انبار فروشنده موجود و آماده پردازش است و امکان ارسال مستقیم توسط فروشنده دارد.",
+              "has_lead_time": true,
+              "type": "seller",
+              "label": {
+                "title": "توسط فروشنده",
+                "description": null
+              },
+              "price": {
+                "text": "رایگان",
+                "value": null,
+                "is_free": true
+              },
+              "shipping_mode": "seller",
+              "delivery_day": "other_days"
+            }
+          ]
+        },
+        "has_importer_price": false,
+        "manufacture_price_not_exist": false,
+        "has_best_price_in_last_month": false,
+        "buy_box_notices": [
+
+        ],
+        "variant_badges": [
+
+        ]
+      },
+      "questions_count": 0,
+      "comments_count": 1,
+      "comments_overview": [
+
+      ],
+      "breadcrumb": [
+        {
+          "title": "دیجی‌کالا",
+          "url": {
+            "base": null,
+            "uri": "/"
+          }
+        },
+        {
+          "title": "مد و پوشاک",
+          "url": {
+            "base": null,
+            "uri": "/main/apparel/"
+          }
+        },
+        {
+          "title": "مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-mens-apparel/"
+          }
+        },
+        {
+          "title": "لباس مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-men-clothing/"
+          }
+        },
+        {
+          "title": "تی شرت مردانه",
+          "url": {
+            "base": null,
+            "uri": "/search/category-men-tee-shirts/"
+          }
+        },
+        {
+          "title": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+          "url": {
+            "base": null,
+            "uri": "/product/dkp-19283460/%D8%AA%DB%8C-%D8%B4%D8%B1%D8%AA-%D8%A2%D8%B3%D8%AA%DB%8C%D9%86-%DA%A9%D9%88%D8%AA%D8%A7%D9%87-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D8%B1%D8%A7%D9%86%DA%98-%D9%85%D8%AF%D9%84-25ra05d20m-2712-01"
+          }
+        }
+      ],
+      "has_size_guide": false,
+      "specifications": [
+        {
+          "title": "مشخصات",
+          "attributes": [
+            {
+              "title": "جنس",
+              "values": [
+                "الیاف طبیعی ",
+                "پنبه یکرو "
+              ]
+            },
+            {
+              "title": "قد",
+              "values": [
+                "روی باسن "
+              ]
+            },
+            {
+              "title": "تنخور لباس",
+              "values": [
+                "معمولی "
+              ]
+            },
+            {
+              "title": "مدل یقه",
+              "values": [
+                "گرد "
+              ]
+            },
+            {
+              "title": "نوع آستین",
+              "values": [
+                "آستین کوتاه "
+              ]
+            },
+            {
+              "title": "مورد استفاده",
+              "values": [
+                "اسپرت ",
+                "روزمره ",
+                "مهمانی "
+              ]
+            },
+            {
+              "title": "طرح",
+              "values": [
+                "ساده "
+              ]
+            },
+            {
+              "title": "توضیحات جنس",
+              "values": [
+                "۱۰۰ ٪الیاف طبیعی "
+              ]
+            },
+            {
+              "title": "کشور مبدا برند",
+              "values": [
+                "ترکیه "
+              ]
+            },
+            {
+              "title": "کشور تولید کننده",
+              "values": [
+                "ایران "
+              ]
+            }
+          ]
+        }
+      ],
+      "expert_reviews": {
+        "attributes": [
+
+        ],
+        "description": "شامل یک عدد تیشرت سفید با نوار مشکی در آستین ها و قد کار آستین کوتاه با یقه گرد میباشد. جنس پارچه آن یک رو شنبه کریستال و از 100% الیاف طبیعی تهیه شده است و فوق العاده راحت و زیبا و با استانداردهای جهانی طراحی شده است. همچنین مناسب استفاده روزمره، رسمی، ورزشی و مهمانی میباشد. در هنگام سفارش حتما از راهنمای انتخاب سایز استفاده کنید. شما میتوانید انواع تیشرت‌های آستین کوتاه و آستین بلند را در رنگ‌ها و طرح‌های مختلف از سایز S تا 7XL سفارش دهید. سابقه درخشان در صنعت مد و پوشاک همیشه در تولیدات و ارائه محصولات با کیفیت پیشتاز بوده است و الیاف مورد استفاده در محصولات همگی از پارچه‌های %100 طبیعی ساخته شده اند\n",
+        "short_review": "",
+        "admin_rates": [
+
+        ],
+        "review_sections": [
+
+        ],
+        "technical_properties": {
+          "advantages": [
+
+          ],
+          "disadvantages": [
+
+          ]
+        }
+      },
+      "meta": {
+        "brand_category_url": {
+          "base": null,
+          "uri": "/search/category-men-tee-shirts/ranj/"
+        }
+      },
+      "last_comments": [
+        {
+          "id": 75754038,
+          "title": "جنس علی ",
+          "body": "من چندمین خریدم از محصولات رانژ هست که با چشم بسته میشه از محصولات رانژ استفاده کرد بخاطر جنس عالی و دوخت خوبشون.برا هدیه دادن هم بخاطر بسته بندی عالیشون میتونید استفاده کنید.در کل درسته قیمتش یکم بالاست ولی ارزشش رو داره.بشور و  با خیال راحت بپوش.پیشنهاد میکنم",
+          "created_at": "12 تیر 1404",
+          "rate": 5,
+          "reactions": {
+            "likes": 0,
+            "dislikes": 0
+          },
+          "files": [
+
+          ],
+          "recommendation_status": null,
+          "is_buyer": true,
+          "user_name": "محسن مشعلی",
+          "is_anonymous": false,
+          "purchased_item": [
+
+          ],
+          "advantages": [
+
+          ],
+          "disadvantages": [
+
+          ],
+          "relative_date": "4 روز پیش"
+        }
+      ],
+      "last_questions": [
+
+      ],
+      "tags": [
+
+      ],
+      "digify_touchpoint": "",
+      "show_type": "fashion",
+      "has_offline_shop_stock": false,
+      "st_cmp_tacker": {
+        "neo": "guAY8ul9XAtqgfX8suKt484JUwlU84lBR008CnrAcnQZQrH0gMYkROekmcoiBywW8WgfBcTv8KRqBk7ztBNlwEJkXR1gNjDAGd8c58GYuCwPlD32YcR81l1FG5qiXPVAjf0HWkLIWcnEjjG2yvBeJVNAeXc5P3vKNIxcuIJWf9rzdEdFSgtJVA5gtkRlsOVsdPXqh",
+        "cx": "eyJjaXBoZXJ0ZXh0IjoiTzRJYkRNVXR6WktsdEszajIwYWVFRkJieUF4bStcLzFEaGc1b1hOQW5Sa3Y3T1Q2RlI1c3RSb2NrM0dzVXI0T01yXC9aVFAwd29zcWxXbHZtNlBNWUVqWGhGZzBRcGJFY000amN5UXh5aEtDRkxwbDJcL0VxX",
+        "dx": "C82TTZ1cW9NenVkZHdjMlg2d2tTVmUrUnZqUGQ3aVFtNisxbW82dTdQZHpyNThKRW4rVXM2dUpuRElyczVVS0k0XC9SZjQxSjJDRHBjN1g3RUpxMlBiNDRLNktcL1VjUVBFNXZXUENZK1VqK0l6XC95UUNoekprUXNMcW84am1BVjl3ZT",
+        "data-fx": "RDRHdWUXN5aTN4MmNaMXpVdTBvNkgyRitYNTNzTWFzM2VhXC8yOWJCa2Q5a0JST1prUlR5bXRPaGI4V1EydkI1RU94YnRFTlNUOXRVSVI0VXhwSVBDemJ0dDVFWkRNWnZhditqNmtwWm5UUXJrMTlIM2R3bmRvQU9EMzROWnRmTlVtVWd",
+        "zero": "RUEdBM2FRVFpuNnN2a21GZnZlOUtleFVyTVwvTktwaW9mdndSS2xFbnl6Y2p6SitQU2JpNUJvOERDVkFZWU9wbk8rdUZwbVVZcyIsIml2IjoiNzgxNGVjZWY3NmVlOGRiYjBlZjU1M2I2MjI1ZGRiNGQiLCJpdGVyYXRpb25zIjo5OTl9"
+      }
+    },
+    "data_layer": {
+      "event": "eec.productDetail",
+      "ecommerce": {
+        "detail": {
+          "actionField": {
+            "list": "category-تی شرت مردانه"
+          },
+          "products": [
+            {
+              "brand": "رانژ",
+              "category": "[RW,تی شرت و پولو شرت مردانه]",
+              "metric6": 0,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 0,
+              "dimension11": 0,
+              "dimension20": "marketable",
+              "item_category2": "مد و پوشاک",
+              "item_category3": "مردانه",
+              "item_category4": "لباس مردانه",
+              "item_category5": "تی شرت مردانه",
+              "name": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+              "id": 19283460,
+              "price": 8900000,
+              "metric8": 1,
+              "dimension3": "marketplace",
+              "dimension10": 1,
+              "dimension15": 0,
+              "metric15": 1,
+              "metric11": 1,
+              "metric12": 0
+            }
+          ]
+        }
+      }
+    },
+    "seo": {
+      "title": "قیمت و خرید تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+      "description": "خرید اینترنتی تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+      "twitter_card": {
+        "title": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+        "image": "https://dkstatics-public.digikala.com/digikala-products/147d611ceae158fb77fcff65d43c2d55c4b6a8b5_1747727182.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+        "price": 0,
+        "description": "خرید اینترنتی تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا"
+      },
+      "open_graph": {
+        "title": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+        "url": "https://www.digikala.com/product/dkp-19283460/تی-شرت-آستین-کوتاه-مردانه-رانژ-مدل-25ra05d20m-2712-01",
+        "image": "https://dkstatics-public.digikala.com/digikala-products/147d611ceae158fb77fcff65d43c2d55c4b6a8b5_1747727182.jpg?x-oss-process=image/resize,m_lfit,h_350,w_350/quality,q_60",
+        "availability": "in stock",
+        "type": "product",
+        "site": "دیجی‌کالا",
+        "price": 0,
+        "description": null
+      },
+      "header": {
+        "title": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+        "description": "خرید اینترنتی تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+        "canonical_url": "https://www.digikala.com/product/dkp-19283460/%D8%AA%DB%8C-%D8%B4%D8%B1%D8%AA-%D8%A2%D8%B3%D8%AA%DB%8C%D9%86-%DA%A9%D9%88%D8%AA%D8%A7%D9%87-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%D8%B1%D8%A7%D9%86%DA%98-%D9%85%D8%AF%D9%84-25ra05d20m-2712-01"
+      },
+      "markup_schema": [
+        {
+          "@type": "Product",
+          "@context": "https://www.schema.org",
+          "name": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+          "alternateName": null,
+          "image": [
+            "https://dkstatics-public.digikala.com/digikala-products/84bc7fe4df8df7bbabcf62956c53dbc5abf46f3c_1747721439.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/0576ed5e0e4530d75fa3210fb3ebdc2d5269a10f_1747721524.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/8f90818a292764eef0033a9f17fa788ee0f86e03_1747721472.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/ceb9a46f82c64de844ee844cffdffd58ff2bba3d_1747721493.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/48b9353d0ec6516c6f0e672c94d045f92fff8b24_1747721493.jpg?x-oss-process=image/resize,h_1600/quality,q_80",
+            "https://dkstatics-public.digikala.com/digikala-products/8291179d9295b6cc0c14c07b79a01817a012fd4c_1747721472.jpg?x-oss-process=image/resize,h_1600/quality,q_80"
+          ],
+          "description": "خرید اینترنتی تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01 به همراه مقایسه، بررسی مشخصات و لیست قیمت امروز در فروشگاه اینترنتی دیجی‌کالا",
+          "mpn": 19283460,
+          "sku": 19283460,
+          "category": "https://www.digikala.com/search/category-men-tee-shirts/",
+          "brand": {
+            "@type": "Brand",
+            "name": "رانژ",
+            "url": "https://www.digikala.com/brand/ranj/",
+            "@id": "https://www.digikala.com/brand/ranj/#brand"
+          },
+          "aggregateRating": null,
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "IRR",
+            "price": 8900000,
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock"
+          },
+          "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "bestRating": 5,
+              "ratingValue": 5
+            },
+            "author": {
+              "@type": "Person",
+              "name": "محسن مشعلی"
+            },
+            "datePublished": "2025-07-03",
+            "reviewBody": "من چندمین خریدم از محصولات رانژ هست که با چشم بسته میشه از محصولات رانژ استفاده کرد بخاطر جنس عالی و دوخت خوبشون.برا هدیه دادن هم بخاطر بسته بندی عالیشون میتونید استفاده کنید.در کل درسته قیمتش یکم بالاست ولی ارزشش رو داره.بشور و  با خیال راحت بپوش.پیشنهاد میکنم",
+            "name": "جنس علی "
+          }
+        },
+        [
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "فروشگاه اینترنتی دیجی‌کالا",
+                "item": {
+                  "@type": "Corporation",
+                  "@id": "https://www.digikala.com/#corporation"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "مد و پوشاک",
+                "item": "https://www.digikala.com/main/apparel/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "مردانه",
+                "item": "https://www.digikala.com/search/category-mens-apparel/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "لباس مردانه",
+                "item": "https://www.digikala.com/search/category-men-clothing/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "تی شرت مردانه",
+                "item": "https://www.digikala.com/search/category-men-tee-shirts/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01"
+              }
+            ]
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "رانژ",
+                "item": {
+                  "@type": "Brand",
+                  "@id": "https://www.digikala.com/brand/ranj/#brand"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "تی شرت مردانه رانژ",
+                "item": "https://www.digikala.com/search/category-men-tee-shirts/ranj/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01"
+              }
+            ]
+          }
+        ]
+      ]
+    },
+    "intrack": {
+      "eventName": "product_detail_pageview",
+      "eventData": {
+        "currency": "IRR",
+        "deviceType": "desktop",
+        "name": "تی شرت آستین کوتاه مردانه رانژ مدل 25RA05D20M-2712-01",
+        "productId": 19283460,
+        "productImageUrl": [
+          "https://dkstatics-public.digikala.com/digikala-products/147d611ceae158fb77fcff65d43c2d55c4b6a8b5_1747727182.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90"
+        ],
+        "quantity": null,
+        "leafCategory": "تی شرت مردانه",
+        "unitPrice": 8900000,
+        "url": "/product/dkp-19283460/تی-شرت-آستین-کوتاه-مردانه-رانژ-مدل-25ra05d20m-2712-01",
+        "supplyCategory": "RW",
+        "categoryLevel1": "مد و پوشاک",
+        "categoryLevel2": "مردانه",
+        "categoryLevel3": "لباس مردانه",
+        "categoryLevel4": "تی شرت مردانه",
+        "categoryLevel5": ""
+      },
+      "userId": "S0VadXdpRkkvVTJSdk1PZzF5TEFVUT09"
+    },
+    "landing_touchpoint": [
+
+    ],
+    "dynamic_touch_points": [
+
+    ],
+    "promotion_banner": {
+      "product_promotion": null,
+      "dkjet_promotion": null
+    },
+    "bigdata_tracker_data": {
+      "page_name": "product",
+      "page_info": {
+        "product_id": 19283460
+      }
+    },
+    "dynamic_pdp_carousel": [
+
+    ],
+    "dk_service": [
+
+    ]
+  }
+}
