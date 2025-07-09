@@ -175,6 +175,7 @@ class Simple_Import_Export
         // Models
         require_once dirname(__FILE__) . '/model/Posts.php';
         require_once dirname(__FILE__) . '/model/Products.php';
+        require_once dirname(__FILE__) . '/model/SKU.php';
         require_once dirname(__FILE__) . '/model/DigiKala.php';
     }
 
