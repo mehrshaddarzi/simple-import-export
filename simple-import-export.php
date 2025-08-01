@@ -3,7 +3,7 @@
  * Plugin Name: Simple Import Export Data
  * Description: Simple Import/Export Data at WordPress
  * Plugin URI:  https://realwp.net
- * Version:     1.5.2
+ * Version:     1.5.3
  * Author:      Mehrshad Darzi
  * Author URI:  https://realwp.net
  * License:     MIT
@@ -177,6 +177,7 @@ class Simple_Import_Export
         require_once dirname(__FILE__) . '/model/Products.php';
         require_once dirname(__FILE__) . '/model/SKU.php';
         require_once dirname(__FILE__) . '/model/DigiKala.php';
+        require_once dirname(__FILE__) . '/model/Price.php';
     }
 
     /**

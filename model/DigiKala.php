@@ -36,7 +36,7 @@ class DigiKala
             return $array;
         }
 
-        $array[self::$key] = __('DigiKala Products', 'simple-import-export');
+        $array[self::$key] = __('ایجاد کالا ووکامرس از دیجی کالا', 'simple-import-export');
         return $array;
     }
 

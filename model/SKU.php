@@ -24,8 +24,8 @@ class SKU
             return $array;
         }
 
-        $array[self::$keyDemo] = __('Change SKU (Demo)', 'simple-import-export');
-        $array[self::$key] = __('Change SKU', 'simple-import-export');
+        $array[self::$keyDemo] = __('دمو تغییر SKU ووکامرس', 'simple-import-export');
+        $array[self::$key] = __('تغییر SKU ووکامرس', 'simple-import-export');
         return $array;
     }
 
