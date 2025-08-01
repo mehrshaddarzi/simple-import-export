@@ -32,6 +32,15 @@ class Price
 
         <tr class="form-field form-required simple_import_export_d_none" data-import-type="<?php echo self::$key; ?>">
             <th scope="row">
+                دریافت تمونه فایل اکسل
+            </th>
+            <td>
+                <a href="<?php echo \Simple_Import_Export::$plugin_url . '/model/price/example.xlsx'; ?>" download="">دانلود</a>
+            </td>
+        </tr>
+
+        <tr class="form-field form-required simple_import_export_d_none" data-import-type="<?php echo self::$key; ?>">
+            <th scope="row">
                 <label for="stock_update">
                     <span><?php _e('برور رسانی موجودی (ستون دوم)', 'simple-import-export'); ?></span>
                 </label>
@@ -88,8 +97,8 @@ class Price
 
         // $row is product ID
         $sku = $row[0];
-        $stock_quantity = (int)$row[1];
-        $price = (float)$row[2];
+        $stock_quantity = (int)str_ireplace([",", "."], "", $row[1]);
+        $price = (float)str_ireplace([",", "."], "", $row[2]);
         if (!empty($option['input']['convert_price']) and trim($option['input']['convert_price']) == "yes") {
             $price = (float)($row[2] / 10);
         }
