@@ -62,9 +62,16 @@ class SKU
                     return new \WP_Error('item_import_error', 'No | ' . $wc_sku . ' | ' . $new_sku);
                 }
 
+                // use function
                 $product = wc_get_product($product_id);
                 $product->set_sku($new_sku);
                 $product->save();
+
+                // check post meta
+                $_sku = get_post_meta($product_id, '_sku', true);
+                if ($_sku != $new_sku) {
+                    update_post_meta($product_id, '_sku', $new_sku);
+                }
 
                 return $return;
             }
